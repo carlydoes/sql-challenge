@@ -58,7 +58,7 @@ where dept_name = 'Sales'
 or dept_name = 'Development';
 
 
--- Question 8: List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name)
+-- Question 8: List the frequency counts, in descending order, of all the employee last names
 select last_name, COUNT(last_name) as "last_name_count"
 from employees
 group by last_name
