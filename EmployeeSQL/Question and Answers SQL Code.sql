@@ -4,11 +4,13 @@ from employees as em
 join salaries as sa
 on em.emp_no = sa.emp_no;
 
+
 -- Question 2: List first name, last name, and hire date for employees who were hired in 1986.
 select first_name, last_name, hire_date
 from employees
 where hire_date >= '1986-01-01'
 and hire_date <= '1986-12-31';
+
 
 -- Question 3: List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 select dem.dept_no, dep.dept_name, em.emp_no, em.last_name, em.first_name
@@ -18,6 +20,7 @@ on dem.dept_no = dep.dept_no
 join employees as em
 on dem.emp_no = em.emp_no;
 
+
 -- Question 4: List the department of each employee with the following information: employee number, last name, first name, and department name.
 select employees.emp_no, employees.last_name, employees.first_name, departments.dept_name
 from employees
@@ -25,6 +28,7 @@ join dept_emp
 on dept_emp.emp_no = employees.emp_no
 join departments 
 on dept_emp.dept_no = departments.dept_no;
+
 
 -- Question 5: List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B
 select first_name, last_name, sex
